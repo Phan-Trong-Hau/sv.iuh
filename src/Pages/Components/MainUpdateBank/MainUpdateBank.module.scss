@@ -1,0 +1,59 @@
+.update-bank {
+    margin-top: 57px;
+    padding: 15px;
+}
+
+.bank-container {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    gap: 15px;
+    transition: all .3s linear;
+}
+
+.bank-content {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 10px;
+    height: 250px;
+    box-shadow: 1px 1px 5px rgb(1 1 1 / 10%);
+}
+
+.bank-title {
+    h2 {
+        color: #578ebe;
+    }
+}
+
+.bank-view {
+    padding: 12px 20px 15px;
+}
+
+.form-body {
+    display: grid;
+    gap: 15px;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &:last-child {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .bank-container {
+        grid-template-columns: 1fr;
+        margin-bottom: 15px;
+    }
+    .bank-content {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .form-group {
+        grid-template-columns: 1fr !important;
+    }
+}

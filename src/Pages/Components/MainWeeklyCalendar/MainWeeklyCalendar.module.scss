@@ -1,0 +1,242 @@
+.weekly-calendar {
+    margin-top: 57px;
+    padding: 15px;
+    display: block;
+
+    .calendar-container {
+        display: grid;
+        grid-template-columns: 1fr 8fr;
+        gap: 15px;
+        transition: all .3s linear;
+    }
+
+    .calendar-content {
+        min-width: 100px;
+        background-color: #ffffff;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-shadow: 1px 1px 5px rgb(1 1 1 / 10%);
+    }
+
+    .radio {
+        padding-top: 5px;
+        font-size: 1.5rem;
+        label {
+            display: inline-block;
+            cursor: pointer;
+            margin-right: 10px;
+            input {
+                width: 20px;
+                transform: translateY(20%);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .calendar {
+        margin-right: 3px;
+        input {
+            outline: none;
+            padding: 5px 10px;
+            width: 150px;
+        }
+    }
+
+    .button {
+        button {
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            padding: 8px 6px;
+            i {
+                font-size: 1.2rem;
+                margin: 0 4px;
+            }
+        }
+    }
+
+    .calendar-body {
+        margin-top: 10px;
+
+        .calendar-table {
+            overflow-x: auto;
+        }
+    }
+
+    table {
+        white-space: nowrap;
+        margin-bottom: 10px;
+        tr {
+            th,
+            td {
+                text-align: center;
+                border: 1px solid #ddd;
+                padding: 8px;
+                min-width: 120px;
+
+                &:first-child {
+                    width: 5%;
+                    min-width: 0;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        thead {
+            font-size: 1.5rem;
+            color: #1da1f2;
+            background-color: #f3f7f9;
+            border-bottom: 3px solid #cad6d8;
+        }
+
+        tbody {
+            tr {
+                td {
+                    height: 150px;
+                    &:first-child {
+                        background-color: #ffffce;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-note {
+        margin: 20px 0;
+        ul {
+            li {
+                margin-right: 15px;
+                display: inline-block;
+                span {
+                    display: inline-block;
+                    width: 40px;
+                    height: 15px;
+                    border: 1px solid #ccc;
+                    margin-right: 10px;
+                    vertical-align: text-top;
+                }
+
+                &:first-child {
+                    span {
+                        background-color: #e7ecf0;
+                    }
+                }
+                &:nth-child(2) {
+                    span {
+                        background-color: #92d6ff;
+                    }
+                }
+                &:nth-child(3) {
+                    span {
+                        background-color: #fdff9a;
+                    }
+                }
+                &:last-child {
+                    span {
+                        background: linear-gradient(#f14f3f 0, #cb4335 100%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .weekly-calendar {
+        .calendar-container {
+            display: block;
+        }
+    }
+}
+
+@media print {
+
+    .calendar-body {
+        position: relative;
+        margin-top: 100px;
+        height: 590px;
+        background-color: white;
+        -webkit-print-color-adjust: exact; 
+    }
+
+    table {
+        white-space: nowrap;
+        margin-bottom: 10px;
+        tr {
+            th,
+            td {
+                text-align: center;
+                border: 1px solid #ddd;
+                padding: 8px;
+                min-width: 120px;
+
+                &:first-child {
+                    width: 5%;
+                    min-width: 0;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        thead {
+            font-size: 1.5rem;
+            color: #1da1f2;
+            background-color: #f3f7f9;
+            border-bottom: 3px solid #cad6d8;
+        }
+
+        tbody {
+            tr {
+                td {
+                    height: 150px;
+                    &:first-child {
+                        background-color: #ffffce;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-note {
+        position: absolute;
+        bottom: 20px;
+        ul {
+            display: flex;
+            li {
+                margin-right: 15px;
+
+                span {
+                    display: inline-block;
+                    width: 40px;
+                    height: 15px;
+                    border: 1px solid #ccc;
+                    margin-right: 10px;
+                    vertical-align: text-top;
+                }
+
+                &:first-child {
+                    span {
+                        background-color: #e7ecf0;
+                    }
+                }
+                &:nth-child(2) {
+                    span {
+                        background-color: #92d6ff;
+                    }
+                }
+                &:nth-child(3) {
+                    span {
+                        background-color: #fdff9a;
+                    }
+                }
+                &:last-child {
+                    span {
+                        background: linear-gradient(#f14f3f 0, #cb4335 100%);
+                    }
+                }
+            }
+        }
+    }
+}

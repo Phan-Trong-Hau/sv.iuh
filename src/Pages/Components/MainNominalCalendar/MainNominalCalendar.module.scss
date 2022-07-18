@@ -1,0 +1,164 @@
+.nominal-calendar {
+   margin-top: 57px;
+   padding: 10px 15px 20px;
+
+   .nominal-container {
+      background-color: #ffffff;
+      border-radius: 7px;
+      box-shadow: 1px 1px 10px rgba(1, 1, 1, 0.1);
+      padding: 10px;
+   }
+
+   .nominal-body {
+      margin: 10px 0 30px;
+   }
+
+   .nominal-radio {
+      text-align: center;
+      padding: 10px 0;
+
+      strong {
+         font-size: 1.3rem;
+         margin-right: 10px;
+      }
+
+      label {
+         display: inline-block;
+         cursor: pointer;
+         margin-right: 15px;
+         font-size: 1.5rem;
+         input {
+            width: 20px;
+            transform: translateY(10%);
+            cursor: pointer;
+         }
+      }
+   }
+
+   .nominal-group {
+      display: grid;
+      grid-template-columns: 1.5fr 3fr 3fr 1.5fr;
+      gap: 15px;
+      padding: 15px 0;
+      div {
+         strong {
+            font-size: 1.3rem;
+            display: block;
+            span {
+               color: #e02222;
+            }
+         }
+
+         input {
+            width: 100%;
+            padding: 5.5px 12px;
+            font-size: 1.4rem;
+            border-radius: 4px;
+            cursor: not-allowed;
+            border: 2px solid #ddd;
+            outline: none;
+            &:focus {
+               border: 2px solid var(--hover-color);
+            }
+         }
+
+         select {
+            width: 100%;
+            padding: 6px 12px;
+            font-size: 1.4rem;
+            border-radius: 4px;
+            outline: none;
+
+            &:focus {
+               border-color: var(--hover-color);
+            }
+         }
+      }
+   }
+
+   .nominal-action {
+      display: grid;
+      grid-template-columns: 6fr 1fr 1.2fr 5.8fr;
+      gap: 10px;
+      button {
+         padding: 10px;
+         font-size: 1.3rem;
+         &:first-child {
+            grid-area: 1/2;
+            background-color: #3598dc;
+            color: white;
+
+            &:hover {
+               background-color: #1c699f;
+            }
+         }
+
+         &:last-child {
+            white-space: nowrap;
+            grid-area: 1/3;
+            background-color: #32c5d2;
+            color: white;
+
+            &:hover {
+               background-color: #26a1ab;
+            }
+         }
+      }
+   }
+
+   .nominal-table {
+      margin-top: 30px;
+      overflow-x: auto;
+
+      table {
+         width: 100%;
+         text-align: center;
+         border: 1px solid #ddd;
+
+         thead {
+            white-space: nowrap;
+            background: #f3f7f9;
+            border-bottom: 2px solid #cad6d8;
+            color: #1da1f2;
+            tr {
+               th {
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  padding: 16px 5px;
+                  border: 1px solid #ddd;
+               }
+            }
+         }
+
+         tbody {
+            white-space: nowrap;
+            tr {
+               td {
+                  font-size: 1.4rem;
+                  padding: 5px;
+                  border: 1px solid #ddd;
+                  &:nth-child(even) {
+                     text-align: left;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .option {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+
+   .text-danger {
+      color: #ed6b75;
+   }
+}
+
+@media only screen and(max-width: 992px) {
+   .nominal-calendar {
+      .nominal-group {
+         grid-template-columns: 1fr;
+      }
+   }
+}

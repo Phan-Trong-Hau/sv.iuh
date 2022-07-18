@@ -1,0 +1,28 @@
+.sidebar-move {
+    font-size: 1.1rem;
+    display: grid;
+    gap: 15px;
+
+    .sidebar-icon {
+        display: none;
+    }
+
+    .move {
+        position: relative;
+        display: inline-block;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 177px;
+    }
+
+    .sidebar-img {
+        box-shadow: 1px 1px 5px rgb(1 1 1 / 10%);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .sidebar-move {
+        display: none;
+    }
+}
