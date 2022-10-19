@@ -161,7 +161,7 @@ const Popup = (props) => {
          <>
             <div className={cx("popup")}>
                <div className={cx("popup-form")}>
-                  <form method="POST" action="/">
+                  <form action="/">
                      <div className={cx("form-gr")}>
                         <label>
                            Mật khẩu cũ <span>(*)</span>
