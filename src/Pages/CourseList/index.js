@@ -1,13 +1,18 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
-import MainCourseList from '../Components/MainCourseList'
+import MainCourseList from "../Components/MainCourseList";
 
 const CourseList = () => {
-    useEffect(() => {
-       document.title = "Chương trình khung";
-    }, []);
     return (
         <>
+            <Helmet>
+                <title>Chương trình khung</title>
+                <meta
+                    name="description"
+                    content="Khung chương trình đào tạo của sinh viên IUH"
+                />
+            </Helmet>
             <Header checkSidebar={false} />
             <MainCourseList />
         </>
