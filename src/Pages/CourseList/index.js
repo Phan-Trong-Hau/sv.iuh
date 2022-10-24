@@ -12,6 +12,7 @@ const CourseList = () => {
                     name="description"
                     content="Khung chương trình đào tạo của sinh viên IUH"
                 />
+                <link rel="canonical" href="/chuong-trinh-khung" />
             </Helmet>
             <Header checkSidebar={false} />
             <MainCourseList />

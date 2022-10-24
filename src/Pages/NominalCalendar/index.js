@@ -1,19 +1,22 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
 import MainNominalCalendar from "../Components/MainNominalCalendar";
 
-
-
 const NominalCalendar = () => {
-     useEffect(() => {
-        document.title = "Xem lịch học";
-     }, []);
     return (
         <>
-            <Header checkSidebar={true}/>
+            <Helmet>
+                <title>Xem lịch học</title>
+                <meta
+                    name="description"
+                    content="Xem lịch học theo lớp danh nghĩa của sinh viên"
+                />
+                <link rel="canonical" href="/lich-hoc-lop-danh-nghia" />
+            </Helmet>
+            <Header checkSidebar={true} />
             <MainNominalCalendar />
         </>
-    )
-}
+    );
+};
 
 export default NominalCalendar;
