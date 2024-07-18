@@ -92,7 +92,7 @@ const MainHome = () => {
                         <div className="home-profile-info">
                            <div className="home-profile-info__col">
                               <div className="home-profile-info__row">
-                                 MSSV: <strong>21111111</strong>
+                                 MSSV: <strong>21001111</strong>
                               </div>
                               <div className="home-profile-info__row">
                                  Họ tên:
@@ -103,7 +103,7 @@ const MainHome = () => {
                               </div>
                               <div className="home-profile-info__row">
                                  Ngày sinh:
-                                 <strong> 01/04/1945</strong>
+                                 <strong> 01/04/2003</strong>
                               </div>
                               <div className="home-profile-info__row">
                                  Nơi sinh:
@@ -112,7 +112,7 @@ const MainHome = () => {
                            </div>
                            <div className="home-profile-info__col">
                               <div className="home-profile-info__row">
-                                 Lớp học: <strong>DHTH17AQN</strong>
+                                 Lớp học: <strong>DHKTPM17A</strong>
                               </div>
                               <div className="home-profile-info__row">
                                  Khóa học:
@@ -128,7 +128,7 @@ const MainHome = () => {
                               </div>
                               <div className="home-profile-info__row">
                                  Ngành:
-                                 <strong> Công nghệ thông tin</strong>
+                                 <strong> Kĩ thuật phần mềm</strong>
                               </div>
                            </div>
                         </div>
