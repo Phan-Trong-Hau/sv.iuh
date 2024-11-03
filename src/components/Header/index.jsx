@@ -14,10 +14,9 @@ const Header = (props) => {
   const [click, setClick] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
   const [popupLogOut, setPopupLogOut] = useState(false);
-  const [popupNotify, setPopupNotify] = useState(true);
+  const [popupNotify, setPopupNotify] = useState(false);
 
   const handlePopup = () => setPopupLogOut(!popupLogOut);
-  const handlePopupNotify = () => setPopupNotify(!popupNotify);
 
   const [width, setWidth] = useState(window.innerWidth);
   const updateDimensions = () => {
@@ -30,6 +29,18 @@ const Header = (props) => {
 
   const handleClick = () => setClick(!click);
   const handleOpen = () => setOpenSidebar(!openSidebar);
+
+  useEffect(() => {
+    const hasShownPopup = sessionStorage.getItem("hasShownPopup");
+    if (!hasShownPopup) {
+      setPopupNotify(true);
+    }
+  }, []);
+
+  const handlePopupNotify = () => {
+    setPopupNotify(false);
+    sessionStorage.setItem("hasShownPopup", "true");
+  };
 
   return (
     <>
